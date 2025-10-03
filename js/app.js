@@ -82,7 +82,7 @@ else
         // ============= themes_codes CODE START =================
         var themes_codes_btn=document.getElementById("theme_btn");
         var themes_codes_value_Set=localStorage.getItem("themes_codes");
-    
+    var nav_logo=document.getElementById("nav_logo");
         if(!themes_codes_value_Set){
           localStorage.setItem("themes_codes","white");
           document.body.classList.add("white")
@@ -99,6 +99,7 @@ else
           localStorage.setItem("themes_codes","black")
           document.body.classList.add("black")
           document.body.classList.remove("white")
+          nav_logo.src = "assets/images/logo/light_logo.png";
           themes_codes_btn.innerHTML=`     <i class="fa-solid fa-moon"></i>`
           
         }
@@ -108,7 +109,8 @@ else
           document.body.classList.add("white")
 
           document.body.classList.remove("black")
-             themes_codes_btn.innerHTML=`     <i class="fa-solid fa-moon"></i>`
+   nav_logo.src = "assets/images/logo/logo.png";
+          themes_codes_btn.innerHTML=`     <i class="fa-solid fa-moon"></i>`
 
         }
 

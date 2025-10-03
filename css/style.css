@@ -6,190 +6,229 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
 :root {
-  --bg1: #e6e6e6;
-  --bg2: #fcfcfc;
-  --default-color:#6ea84c;
+    --bg1: #e6e6e6;
+    --bg2: #fcfcfc;
+    --default-color: #6ea84c;
 }
 
 body {
-  margin: 0% !important;
-  padding: 0% !important;
-  font-family: "Funnel Display", sans-serif !important;
-  overflow-x: hidden !important;
-  background-color: var(--bg1) !important;
-  scroll-behavior: smooth !important;
-   transition:scroll-behavior  2.6s ease-in-out  !important;
+    margin: 0% !important;
+    padding: 0% !important;
+    font-family: "Funnel Display", sans-serif !important;
+    overflow-x: hidden !important;
+    background-color: var(--bg1) !important;
+    scroll-behavior: smooth !important;
+    transition: scroll-behavior 2.6s ease-in-out !important;
 }
 
 body.white {
-  font-family: "Funnel Display", sans-serif;
-   --bg1: #f5f5f5;
-  --bg2: #fcfcfc;
+    font-family: "Funnel Display", sans-serif;
+    --bg1: #f5f5f5;
+    --bg2: #fcfcfc;
 
-  --color1: #1a1a1a;
-  --color2: #000000;
+    --color1: #1a1a1a;
+    --color2: #000000;
 
-  background-color: #f5f5f5 !important;
+    background-color: #f8f8f8 !important;
 }
 
 body.black {
 
 
-  --bg1: #1b1b1b;
-  --bg2: #121212;
-  --color1: #f5f5f5;
-  --color2: #fcfcfc;
+    --bg1: #1b1b1b;
+    --bg2: #121212;
+    --color1: #f5f5f5;
+    --color2: #fcfcfc;
 
-  background-color: #1b1b1b !important;
+    background-color: #1b1b1b !important;
 
 }
+
 .bg_white {
-  background-color: var(--bg2) !important;
+    background-color: var(--bg2) !important;
 }
 
 .bg_dark1 {
-  background-color: var(--bg1) !important;
+    background-color: var(--bg1) !important;
 }
 
 .bg_dark2 {
-  background-color: var(--bg2) !important;
+    background-color: var(--bg2) !important;
 }
 
 .text_dark1 {
-  color: var(--color1) !important;
+    color: var(--color1) !important;
 }
 
 .text_dark2 {
-  color: var(--color2) !important;
+    color: var(--color2) !important;
 }
 
 /* ============= HEADER CODE START ================= */
 .headers {
-  position: absolute;
-  top: 0%;
-  z-index: 11111 !important;
-  width: 100%;
+    position: absolute;
+    top: 0%;
+    z-index: 11111 !important;
+    width: 100%;
 }
-
+.fa-diamond {
+    z-index: 99111 !important;
+}
 .offcanvas_top, .offcanvas_bottom {
-  transition: 0.4s ease-in-out !important;
-  height: 100% !important;
-  z-index: 23111 !important;
+    transition: 0.4s ease-in-out !important;
+    height: 100% !important;
+    z-index: 23111 !important;
 }
 
 .offcanvas_top {
-  width: 30%;
-  background-color: var(--bg1) !important;
+    width: 30%;
+    background-color: var(--bg1) !important;
 }
 
 .offcanvas_bottom {
-  width: 70%;
-  margin-left: auto !important;
-  background-color: var(--bg2) !important;
+    width: 70%;
+    margin-left: auto !important;
+    background-color: var(--bg2) !important;
 }
 
 @media (max-width:992px) {
-  .offcanvas_bottom {
-    width: 100% !important;
-  }
+    .offcanvas_bottom {
+        width: 100% !important;
+    }
 }
 
 .curosr_boyd {
-  border-radius: 50% !important;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: white !important;
-  width: 25px !important;
-  height: 25px !important;
-  cursor: none !important;
-  pointer-events: none !important;
-  border: 2px solid lightgray !important;
-  transform: translate(-50%, -50%) !important;
+    border-radius: 50% !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white !important;
+    width: 25px !important;
+    height: 25px !important;
+    cursor: none !important;
+    pointer-events: none !important;
+    border: 2px solid lightgray !important;
+    transform: translate(-50%, -50%) !important;
 
 
 }
 
 canvas {
-  z-index: 11111122222 !important;
-  position: fixed;
-  top: 0;
-  left: 0;
+    z-index: 11111122222 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 @keyframes headerani {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
 
 
-.navbar_lg{
-    border: 1px solid rgba(255, 255, 255, 0.185);
+.navbar_lg {
+    border: 1px solid rgba(255, 255, 255, 0.253);
     border-radius: 30px;
+    padding: 15px 0px !important;
     margin: 0% auto !important;
     width: 98% !important;
     background-color: var(--bg2) !important;
 }
-.navbar_lg .nav-item .nav-link{
-color: var(--color2) !important;
-margin: 0% 5px !important;
-font-size: 17px !important;
+
+.navbar_lg .nav-item .nav-link {
+    color: var(--color2) !important;
+    margin: 0% 5px !important;
+    font-size: 17px !important;
 }
-.navbar_lg i{
-color: var(--color2) !important;
+
+.navbar_lg i {
+    color: var(--color2) !important;
 }
+
 /* ============= HEADER CODE END ======================== */
 
 .head1_banner {
-  line-height: 100% !important;
+    line-height: 100% !important;
 }
+
 /* ============== HOME BANNER CODE START ============== */
-.z_5{
+.z_5 {
     z-index: 111 !important;
 }
-.fs_7vw{
+
+.fs_7vw {
     font-size: 7vw !important;
 }
-.home_banner_img{
+
+.home_banner_img {
     height: 99vh !important;
 }
-.btn_default{
+
+.btn_default {
     border: none;
- background-color: transparent;   
- position: relative;
-z-index: 2;
-font-size: 18px !important;
-border-bottom: 1px solid var(--default-color) !important;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    font-size: 18px !important;
+    border-bottom: 1px solid var(--default-color) !important;
 
 
 }
-.btn_default:hover .btn_absoulate{
+
+.btn_default:hover .btn_absoulate {
     width: 110% !important;
     padding: 25px 20px !important;
-border-radius: 20px !important;
+    border-radius: 20px !important;
 }
-.btn_absoulate{
+
+.btn_absoulate {
     transition: 0.6s ease-in-out !important;
-position: absolute;
-height: 130% ;
-z-index: -1;
-bottom: -41%;
-left: -5%;
+    position: absolute;
+    height: 130%;
+    z-index: -1;
+    bottom: -41%;
+    left: -5%;
     width: 25% !important;
     padding: 25px 25px;
     border-radius: 50%;
-    background-color:var(--default-color);
+    background-color: var(--default-color);
 }
-.blur_banner_div{
+
+.blur_banner_div {
     padding: 10px;
     border: 1px solid rgba(211, 211, 211, 0.164) !important;
     border-radius: 10px !important;
     background-color: rgba(255, 254, 254, 0.062) !important;
     backdrop-filter: blur(10px) !important;
 }
+
 /* ============== HOME BANNER CODE END ================= */
+
+
+/* ============== MARQUEE SLIDER CODE START ==================== */
+.marque_sluder {
+    display: flex;
+    animation: 16s linear infinite marque_slider;
+}
+
+.marque_sluder h2 {
+    color: var(--color1);
+    font-size: 6vw !important;
+}
+
+@keyframes marque_slider {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ============== MARQUEE SLIDER CODE END ======================= */
