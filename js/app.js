@@ -134,7 +134,17 @@ if (cusor_body) {
   }
 });
 // ===================== HEADER CODE END ======================
-
+// ===================== FOOTER CODE START ======================
+var footer = document.getElementById("footer");
+if (footer) {
+  // ===================== footer CODE START ======================
+  fetch("../footer.html")
+    .then((e) => e.text())
+    .then((data) => {
+      footer.innerHTML = data;
+    });
+}
+// ===================== FOOTER CODE END ======================
 
 // ============ MAEUQE ACTIVE CODE START =====================
 document.addEventListener("DOMContentLoaded", () => {

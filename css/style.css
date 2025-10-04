@@ -19,7 +19,7 @@ body {
     font-family: "Funnel Display", sans-serif !important;
     background-color: var(--bg1) !important;
     scroll-behavior: smooth !important;
-    overflow-x: hidden !important;
+    /* overflow-x: hidden !important; */
     transition: scroll-behavior 2.6s ease-in-out !important;
 }
 
@@ -80,6 +80,10 @@ body.black {
 
 .fa-diamond {
     z-index: 99111 !important;
+}
+.footer-link{
+    text-decoration: none !important;
+    color: var(--color1) !important; 
 }
 
 .offcanvas_top, .offcanvas_bottom {
@@ -223,8 +227,8 @@ canvas {
 .marque_sluder {
     overflow: hidden !important;
     display: flex;
-    width: max-content !important;
-    /* content ke hisaab se auto width */
+    width: 100% !important;
+    white-space:  wrap !important;
     animation: marque_slider 18s linear infinite;
 }
 
@@ -275,10 +279,14 @@ section {
 /* ============== MARQUEE SLIDER CODE END ==================== */
 
 .active_sservice_block_container {
+
+     overflow-x: hidden !important;
     transition: 1.4s ease-in-out !important;
 }
 
 .service_img {
+     overflow-x: hidden !important;
+
     width: 100% !important;
     height: 200px !important;
     object-fit: cover !important;
@@ -289,6 +297,8 @@ section {
 
 }
 .service-number{
+     overflow-x: hidden !important;
+
     transition: 1.4s ease-in-out !important;
     position: absolute;
     bottom: 20% ;
@@ -297,18 +307,27 @@ section {
 
 .active_sservice_block_container .service_img {
     right: 2% !important;
+     overflow-x: hidden !important;
+
     border-radius: 20px !important;
 
 }
 
 .active_sservice_block_container .service-number {
     transition: 1.4s ease-in-out !important;
+     overflow-x: hidden !important;
     border-radius: 20px !important;
     left: 5% !important;
 }
 .service-block-container{
         border-radius: 20px !important;
+     overflow-x: hidden !important;
  color:var(--color2) !important;
     padding:20px 0px  !important;
     margin-bottom: 40px !important;
+}
+
+
+.footer_round{
+    border-radius: 70px 70px 0px 0px !important;
 }
