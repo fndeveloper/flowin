@@ -6,6 +6,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 /* ====================== ANIMATION CDN ========================= */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
 :root {
     --bg1: #e6e6e6;
     --bg2: #fcfcfc;
@@ -57,6 +58,10 @@ body.black {
     background-color: var(--bg2) !important;
 }
 
+.bg {
+    background-color: var(--default-color) !important;
+}
+
 .text_dark1 {
     color: var(--color1) !important;
 }
@@ -72,9 +77,11 @@ body.black {
     z-index: 11111 !important;
     width: 100%;
 }
+
 .fa-diamond {
     z-index: 99111 !important;
 }
+
 .offcanvas_top, .offcanvas_bottom {
     transition: 0.4s ease-in-out !important;
     height: 100% !important;
@@ -215,41 +222,93 @@ canvas {
 /* ============== MARQUEE SLIDER CODE START ==================== */
 .marque_sluder {
     overflow: hidden !important;
-  display: flex;
-width: max-content !important; /* content ke hisaab se auto width */
-  animation: marque_slider 18s linear infinite;
+    display: flex;
+    width: max-content !important;
+    /* content ke hisaab se auto width */
+    animation: marque_slider 18s linear infinite;
 }
 
 .marque_sluder h2 {
-    opacity: 0.1  !important;
+    opacity: 0.1 !important;
     color: var(--color1);
     font-size: 6vw;
     margin: 0 20px;
     white-space: nowrap;
     transition: 2.2s ease-in-out !important;
-transform: scale(0.9);
+    transform: scale(0.9);
 
 }
 
 @keyframes marque_slider {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* Half tak hi le jao */
-  }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Half tak hi le jao */
+    }
 }
-.maruqe_active h2{
-opacity: 1 !important;
-transform: scale(1);
+
+.maruqe_active h2 {
+    opacity: 1 !important;
+    transform: scale(1);
 }
-section{
+
+.col-org {
+    color: var(--default-color) !important;
+}
+
+section {
     transition: 0.9s ease-in-out !important;
 }
-.active_section{
+
+.active_section {
     transition: 0.9s ease-in-out !important;
 
-     animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 4s; /* don't forget to set a duration! */
+    animation: fadeIn;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 4s;
+    /* don't forget to set a duration! */
 }
+
 /* ============== MARQUEE SLIDER CODE END ==================== */
+
+.active_sservice_block_container {
+    transition: 1.4s ease-in-out !important;
+}
+
+.service_img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    position: absolute;
+    bottom: -105px !important;
+    right: -120% !important;
+    transition: 1.4s ease-in-out !important;
+
+}
+.service-number{
+    transition: 1.4s ease-in-out !important;
+    position: absolute;
+    bottom: 20% ;
+    left: -150%;
+}
+
+.active_sservice_block_container .service_img {
+    right: 2% !important;
+    border-radius: 20px !important;
+
+}
+
+.active_sservice_block_container .service-number {
+    transition: 1.4s ease-in-out !important;
+    border-radius: 20px !important;
+    left: 5% !important;
+}
+.service-block-container{
+        border-radius: 20px !important;
+ color:var(--color2) !important;
+    padding:20px 0px  !important;
+    margin-bottom: 40px !important;
+}

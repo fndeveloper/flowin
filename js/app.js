@@ -176,3 +176,31 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("❌ No <section> found");
   }
 });
+
+// =============== service-block-container start ===================
+ 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const service_block_container = document.querySelectorAll(".service-block-container"); 
+
+  if (service_block_container.length > 0) {
+    window.addEventListener("scroll", () => {
+      service_block_container.forEach((section) => {
+        console.log(section);
+        
+        const rect = section.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.top < windowHeight - 180  && rect.bottom >0) {
+        section.classList.add("active_sservice_block_container");
+        } else {
+          section.classList.remove("active_sservice_block_container");
+        }
+      });
+    });
+  } else {
+    console.log("❌ No <section> found");
+  }
+});
+
+// =============== service-block-container end ===================
