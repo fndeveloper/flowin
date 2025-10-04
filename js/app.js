@@ -134,3 +134,45 @@ if (cusor_body) {
   }
 });
 // ===================== HEADER CODE END ======================
+
+
+// ============ MAEUQE ACTIVE CODE START =====================
+document.addEventListener("DOMContentLoaded", () => {
+  const marque_container = document.getElementById("marque_container");
+
+  if (marque_container) {
+    window.addEventListener("scroll", () => {
+      const rect = marque_container.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight && rect.bottom > 30) {
+        marque_container.classList.add("maruqe_active");
+      } else {
+        marque_container.classList.remove("maruqe_active");
+      }
+    });
+  } 
+});
+
+// ============ MAEUQE ACTIVE CODE END =======================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section"); 
+
+  if (sections.length > 0) {
+    window.addEventListener("scroll", () => {
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.top < windowHeight -240 && rect.bottom >0) {
+          section.classList.add("active_section");
+        } else {
+          section.classList.remove("active_section");
+        }
+      });
+    });
+  } else {
+    console.log("❌ No <section> found");
+  }
+});

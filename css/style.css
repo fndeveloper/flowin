@@ -4,7 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 /* =========== ANIMATION CDN ============= */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
-
+/* ====================== ANIMATION CDN ========================= */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 :root {
     --bg1: #e6e6e6;
     --bg2: #fcfcfc;
@@ -15,9 +16,9 @@ body {
     margin: 0% !important;
     padding: 0% !important;
     font-family: "Funnel Display", sans-serif !important;
-    overflow-x: hidden !important;
     background-color: var(--bg1) !important;
     scroll-behavior: smooth !important;
+    overflow-x: hidden !important;
     transition: scroll-behavior 2.6s ease-in-out !important;
 }
 
@@ -167,6 +168,7 @@ canvas {
 
 .home_banner_img {
     height: 99vh !important;
+    width: 100% !important;
 }
 
 .btn_default {
@@ -212,23 +214,42 @@ canvas {
 
 /* ============== MARQUEE SLIDER CODE START ==================== */
 .marque_sluder {
-    display: flex;
-    animation: 16s linear infinite marque_slider;
+    overflow: hidden !important;
+  display: flex;
+width: max-content !important; /* content ke hisaab se auto width */
+  animation: marque_slider 18s linear infinite;
 }
 
 .marque_sluder h2 {
+    opacity: 0.1  !important;
     color: var(--color1);
-    font-size: 6vw !important;
+    font-size: 6vw;
+    margin: 0 20px;
+    white-space: nowrap;
+    transition: 2.2s ease-in-out !important;
+transform: scale(0.9);
+
 }
 
 @keyframes marque_slider {
-    0% {
-        transform: translateX(0px);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Half tak hi le jao */
+  }
 }
+.maruqe_active h2{
+opacity: 1 !important;
+transform: scale(1);
+}
+section{
+    transition: 0.9s ease-in-out !important;
+}
+.active_section{
+    transition: 0.9s ease-in-out !important;
 
-/* ============== MARQUEE SLIDER CODE END ======================= */
+     animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 4s; /* don't forget to set a duration! */
+}
+/* ============== MARQUEE SLIDER CODE END ==================== */
