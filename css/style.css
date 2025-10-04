@@ -19,7 +19,7 @@ body {
     font-family: "Funnel Display", sans-serif !important;
     background-color: var(--bg1) !important;
     scroll-behavior: smooth !important;
-    /* overflow-x: hidden !important; */
+    /* overflow: hidden !important; */
     transition: scroll-behavior 2.6s ease-in-out !important;
 }
 
@@ -280,12 +280,12 @@ section {
 
 .active_sservice_block_container {
 
-     overflow-x: hidden !important;
+     overflow: hidden !important;
     transition: 1.4s ease-in-out !important;
 }
 
 .service_img {
-     overflow-x: hidden !important;
+     overflow: hidden !important;
 
     width: 100% !important;
     height: 200px !important;
@@ -297,7 +297,7 @@ section {
 
 }
 .service-number{
-     overflow-x: hidden !important;
+     overflow: hidden !important;
 
     transition: 1.4s ease-in-out !important;
     position: absolute;
@@ -307,7 +307,7 @@ section {
 
 .active_sservice_block_container .service_img {
     right: 2% !important;
-     overflow-x: hidden !important;
+     overflow: hidden !important;
 
     border-radius: 20px !important;
 
@@ -315,13 +315,13 @@ section {
 
 .active_sservice_block_container .service-number {
     transition: 1.4s ease-in-out !important;
-     overflow-x: hidden !important;
+     overflow: hidden !important;
     border-radius: 20px !important;
     left: 5% !important;
 }
 .service-block-container{
         border-radius: 20px !important;
-     overflow-x: hidden !important;
+     overflow: hidden !important;
  color:var(--color2) !important;
     padding:20px 0px  !important;
     margin-bottom: 40px !important;
