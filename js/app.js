@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (service_block_container.length > 0) {
     window.addEventListener("scroll", () => {
       service_block_container.forEach((section) => {
-        console.log(section);
+   
         
         const rect = section.getBoundingClientRect();
         const windowHeight = window.innerHeight;
@@ -214,3 +214,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =============== service-block-container end ===================
+
+
+fetch("../config.js")
+  .then(response => response.json())
+  .then(data => {
+    fetch(`${data.api_url}`)
+    
+    .then(res => res.json())
+    .then((data) => {
+      console.log(data);
+      
+    })
+    .catch((error) => {
+      console.error("Error fetching data: ", error);
+    });
+
+  });  
