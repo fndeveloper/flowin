@@ -181,6 +181,10 @@ canvas {
     height: 99vh !important;
     width: 100% !important;
 }
+.short_banner{
+     height: 59vh !important;
+    width: 100% !important;
+}
 
 .btn_default {
     border: none;

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Div as PDF</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
+  #invoice {
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #333;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin: 20px auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid #333;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #downloadBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="invoice">
+  <h2>Invoice</h2>
+  <p>Date: 16-Oct-2025</p>
+  <table>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Product A</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>Product B</td>
+      <td>$50</td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td>$150</td>
+    </tr>
+  </table>
+</div>
+
+<button id="downloadBtn">Download as PDF</button>
+
+<script>
+document.getElementById("downloadBtn").addEventListener("click", () => {
+    const element = document.getElementById("invoice");
+
+    html2pdf()
+        .set({
+            margin: 10,
+            filename: 'invoice.pdf',
+            image: { type: 'jpeg', quality: 1 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        })
+        .from(element)
+        .save();
+});
+</script>
+
+</body>
+</html>
