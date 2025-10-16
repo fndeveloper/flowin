@@ -215,19 +215,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // =============== service-block-container end ===================
 
-
-fetch("../config.js")
-  .then(response => response.json())
+// agar proxy.php same origin par hai:
+fetch("../proxy.php")
+  .then(res => {
+    if(!res.ok) throw new Error("Network response not ok");
+    return res.json();
+  })
   .then(data => {
-    fetch(`${data.api_url}`)
-    
-    .then(res => res.json())
-    .then((data) => {
-      console.log(data);
-      
-    })
-    .catch((error) => {
-      console.error("Error fetching data: ", error);
-    });
-
-  });  
+    console.log("Data from proxy:", data);
+  })
+  .catch(err => console.error("Fetch error:", err));
